@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+    font-family: "Poppins", sans-serif;
+    /* color-scheme: dark; */
+    --salmon: #fa8072;
+    --medium-purple: #9370db;
+    --lavender: #E6E6FA
+}
+
+.bg-hero {
+    background-image: url('https://cdn.prod.website-files.com/639b3e775b326dcf7cea3e70/639b3e775b326d7eb5ea3efb_home-hero-bg.svg');
+    background-size: cover;
+    /* Adjust as needed */
+    background-repeat: no-repeat;
+    /* Adjust as needed */
+    background-position: center;
+    /* Adjust as needed */
+}
+/* background: rgb(5,48,100);
+background: linear-gradient(148deg, rgba(5,48,100,1) 0%, rgba(161,62,167,1) 34%, rgba(49,19,51,1) 62%, rgba(0,0,0,1) 93%); */
+.bg-metric {
+    background-image: linear-gradient(148deg, rgb(0, 0, 0) 15%, rgb(105, 34, 109) 34%, rgba(49,19,51,1) 62%, rgba(0,0,0,1) 93%),
+        url('https://cdn.prod.website-files.com/639b3e775b326dcf7cea3e70/639b3e775b326d23caea3ebf_gradient-bg.svg');
+    background-size: cover;
+    /* Adjust as needed */
+    background-repeat: no-repeat;
+    /* Adjust as needed */
+    background-position: center;
+}
+
+.element {
+    background-color: var(--lavender);
+}
+
+.custom-border {
+    /* Define the gradient colors */
+    --border-gradient: linear-gradient(to right, var(--salmon), var(--medium-purple));
+
+    /* Apply the gradient border */
+    border-image: var(--border-gradient);
+    border-image-slice: 1;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+}
+
+/* FinalPage */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.gradient-container {
+    background: linear-gradient(114deg, #9f6eed, #fc907e, #9f6eed, #fc907e);
+
+    background-size: 600% 600%;
+    animation: gradient 20s ease infinite;
+}
